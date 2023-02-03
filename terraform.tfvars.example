@@ -1,0 +1,10 @@
+# Provider environment variables
+aws_region = "us-east-1"
+aws_profile = "default"
+aws_config_file = ["~/.aws/config"]
+
+# Get the Materialize Egress IPs, eg. `SELECT * FROM mz_egress_ips;`
+mz_egress_ips = [""]
+vpc_id = ""
+subnet_id = ""
+ssh_public_key = ""
