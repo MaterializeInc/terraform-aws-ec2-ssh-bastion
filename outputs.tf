@@ -13,7 +13,9 @@ output "ssh_bastion_details" {
             );
 
             -- Get the SSH private key for this connection:
+            \x
             SELECT * FROM mz_ssh_tunnel_connections;
+            \x
 
         -- On the EC2 instance:
             -- From another terminal, SSH into the bastion host with:
