@@ -12,6 +12,13 @@ This module will create the following resources:
 - SSH key pair: Your public key will be used to access the EC2 instance
 - EC2 instance: Ubuntu 20.04 LTS
 
+To override the default AWS provider variables, you can export the following environment variables:
+
+```bash
+export AWS_PROFILE=<your_aws_profile> # eg. default
+export AWS_CONFIG_FILE=<your_aws_config_file> # eg. ["~/.aws/config"]
+```
+
 ## Prerequisites
 
 Before using this module, you must have the following:
