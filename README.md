@@ -5,7 +5,7 @@ A Terraform Module to set up a pre-configured EC2 SSH Bastion Host.
 For the manual setup, see the [Materialize SSH Tunnel](https://materialize.com/docs/ops/network-security/ssh-tunnel) documentation.
 
 > **Warning**
-> This is provided on a best-effort basis and Materialize cannot offer support for this module
+> Materialize has provided this provider as a starting point to provide baseline security infrastructure using the latest Ubuntu 20 image. It is the user's responsibility to ensure the EC2 bastion host is current with security patches once in service and to take other appropriate steps such as properly securing bastion SSH keys.
 
 ## Overview
 
