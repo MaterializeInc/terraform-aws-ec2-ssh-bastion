@@ -69,8 +69,6 @@ Before using this module, you must have the following:
 3. Define the following variables in `terraform.tfvars`:
 
     - `aws_region`: The AWS region, eg. `us-east-1`
-    - `aws_profile`: The AWS profile, eg. `default`
-    - `aws_config_file`: The AWS config file, eg. `~/.aws/config`
     - `mz_egress_ips`: Materialize instance egress IP addresses
     - `public_key`: Your public SSH key
     - `vpc_id`: VPC ID
