@@ -4,6 +4,9 @@ A Terraform Module to set up a pre-configured EC2 SSH Bastion Host.
 
 For the manual setup, see the [Materialize SSH Tunnel](https://materialize.com/docs/ops/network-security/ssh-tunnel) documentation.
 
+> **Warning**
+> This is provided on a best-effort basis and Materialize cannot offer support for this module
+
 ## Overview
 
 This module will create the following resources:
@@ -125,6 +128,12 @@ Before using this module, you must have the following:
         SSH TUNNEL ssh_connection
     );
 ```
+
+## Security
+
+The module uses the `ubuntu/images/hvm-ssd/ubuntu-focal-20.04-amd64-server-*` AMI by [Canonical](https://ubuntu.com/server/docs/cloud-images/amazon-ec2).
+
+The `unattended-upgrade` package is installed and configured to automatically install security updates. However, it is recommended to regularly update the instance and ensure that the latest security updates are installed. Make sure to check this with your security team.
 
 ## Helpful links
 

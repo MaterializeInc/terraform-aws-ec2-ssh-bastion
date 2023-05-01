@@ -1,6 +1,6 @@
 output "ssh_bastion_details" {
-#     value = aws_instance.ssh_bastion
-# }
+  #     value = aws_instance.ssh_bastion
+  # }
   value = <<EOF
         -- Your IP is: ${aws_instance.ssh_bastion.public_ip}
 
