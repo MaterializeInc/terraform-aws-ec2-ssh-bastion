@@ -46,3 +46,8 @@ output "ssh_bastion_details" {
             );
     EOF
 }
+
+# Output the SSH bastion host details
+output "ssh_bastion_server" {
+  value = aws_instance.ssh_bastion
+}
