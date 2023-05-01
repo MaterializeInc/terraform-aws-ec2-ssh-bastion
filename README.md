@@ -30,8 +30,7 @@ Before using this module, you must have the following:
     Access the Materialize instance and run the following query:
 
     ```sql
-    SELECT '[' || string_agg( '"' || egress_ip || '/32' || '"', ', ') || ']' as egress_ip_array
-        FROM mz_egress_ips;
+    SELECT jsonb_agg(egress_ip || '/32') egress_cidrs FROM mz_egress_ips;
     ```
 
     The query above will return a JSON array of egress IP addresses. Define the following variable in your `terraform.tfvars` file:
