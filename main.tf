@@ -28,4 +28,11 @@ resource "aws_instance" "ssh_bastion" {
   }
 
   vpc_security_group_ids = [aws_security_group.ssh_bastion.id]
+
+  # Install unattended-upgrade package to automatically install security updates
+  user_data = <<-EOF
+              #!/bin/bash
+              apt-get update -y
+              apt-get install -y unattended-upgrades
+              EOF
 }
