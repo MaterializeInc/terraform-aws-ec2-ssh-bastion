@@ -29,6 +29,8 @@ resource "aws_instance" "ssh_bastion" {
 
   vpc_security_group_ids = [aws_security_group.ssh_bastion.id]
 
+  associate_public_ip_address = var.associate_public_ip_address
+
   # Install unattended-upgrade package to automatically install security updates
   user_data = <<-EOF
               #!/bin/bash
