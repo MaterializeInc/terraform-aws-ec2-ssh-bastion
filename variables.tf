@@ -37,3 +37,9 @@ variable "instance_type" {
   description = "Instance type"
   default     = "t2.micro"
 }
+
+variable "associate_public_ip_address" {
+  type        = bool
+  description = "Associate a public IP address with the instance"
+  default     = true
+}
